@@ -28,17 +28,17 @@ body {
 }
 
 #clock-icon {
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 #time {
   margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 65px;
+  font-size: 4.1rem;
 }
 
 #date {
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
 #toggle-theme-button {
@@ -56,7 +56,7 @@ body {
 
 #icon-theme {
   pointer-events: none;
-  font-size: 20px;
+  font-size: 1.5rem;
 }
 
 /* Dark theme */
@@ -76,4 +76,28 @@ body.dark {
 
 #toggle-theme-button.dark:hover {
   background-color: #424242;
+}
+
+/* Small Screens */
+
+@media screen and (max-width: 415px) {
+  #clock {
+    width: 270px;
+  }
+  
+  #clock-icon {
+    font-size: 1.2rem;
+  }
+  
+  #time {
+    font-size: 2.5rem;
+  }
+  
+  #date {
+    font-size: 1rem;
+  }
+
+  #icon-theme {
+    font-size: 1.2rem;
+  }
 }
