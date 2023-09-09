@@ -1,6 +1,35 @@
 const toggleThemeButton = document.getElementById('toggle-theme-button');
+const getTimeUnit = unit => unit < 10 ? '0' + unit : unit;
 
-function loadTheme() {
+const updateTime = () => {
+  const hoursContainer = document.getElementById('hours');
+  const minutesContainer = document.getElementById('minutes');
+  const secondsContainer = document.getElementById('seconds');
+  const time = new Date();
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
+  let seconds = time.getSeconds();
+
+  hoursContainer.textContent = getTimeUnit(hours);
+  minutesContainer.textContent = getTimeUnit(minutes);
+  secondsContainer.textContent = getTimeUnit(seconds);
+}
+
+const insertDate = () => {
+  const yearContainer = document.getElementById('year');
+  const monthContainer = document.getElementById('month');
+  const dayContainer = document.getElementById('day');
+  const time = new Date();
+  let day = time.getDate();
+  let month = time.getMonth() + 1;
+  let year = time.getFullYear();
+
+  dayContainer.textContent = getTimeUnit(day);
+  monthContainer.textContent = getTimeUnit(month);
+  yearContainer.textContent = getTimeUnit(year);
+}
+
+const loadTheme = () => {
   const bodyEl = document.querySelector('body');
   const clockEl = document.querySelector('#clock');
   const toggleThemeButton = document.querySelector('#toggle-theme-button');
@@ -23,7 +52,7 @@ function loadTheme() {
   }
 }
 
-function toggleTheme() {
+const toggleTheme = () => {
   const bodyEl = document.querySelector('body');
   const clockEl = document.querySelector('#clock');
   const toggleThemeButton = document.querySelector('#toggle-theme-button');
@@ -45,6 +74,10 @@ function toggleTheme() {
 }
 
 window.addEventListener('load', () => {
+  insertDate();
   loadTheme();
 });
 toggleThemeButton.addEventListener('click', toggleTheme);
+
+setInterval(updateTime, 1000);
+setInterval(insertDate, (60 * 1000));
