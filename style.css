@@ -61,6 +61,13 @@ body {
 
 /* Dark theme */
 
+body.dark,
+#clock.dark,
+#toggle-theme-button.dark,
+#toggle-theme-button.dark:hover {
+  transition: .3s ease-in;
+}
+
 body.dark {
   background-color: var(--text-color);
   color: var(--bg-color);
