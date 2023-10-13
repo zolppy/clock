@@ -1,23 +1,26 @@
 @charset "UTF-8";
 
 :root {
-  --bg-color: #f5f5f5;
-  --text-color: #333;
-  --transition: .3s ease-in;
+  --soft-white: #f5f5f5;
+  --soft-black: #333;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body,
 #clock,
 #toggle-theme-button,
 #toggle-theme-button:hover {
-  transition: var(--transition);
+  transition: .3s ease-out;
 }
 
 body {
   height: 100vh;
   font-family: 'Comfortaa', cursive;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--soft-white);
+  color: var(--soft-black);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,13 +29,15 @@ body {
 }
 
 #clock {
-  padding: 20px;
-  border-radius: 20px;
-  width: 400px;
+  padding: 15px;
+  border-radius: 50%;
+  height: 330px;
+  width: 330px;
+  box-shadow: 2px 7px 20px rgba(0, 0, 0, .5);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  box-shadow: 2px 5px 15px rgba(0, 0, 0, .3);
 }
 
 #clock-icon {
@@ -42,7 +47,7 @@ body {
 #time {
   margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 4.1rem;
+  font-size: 3.1rem;
 }
 
 #date {
@@ -73,12 +78,12 @@ body.dark,
 #clock.dark,
 #toggle-theme-button.dark,
 #toggle-theme-button.dark:hover {
-  transition: var(transition);
+  transition: .3s ease-out;
 }
 
 body.dark {
-  background-color: var(--text-color);
-  color: var(--bg-color);
+  background-color: var(--soft-black);
+  color: var(--soft-white);
 }
 
 #clock.dark {
@@ -86,7 +91,7 @@ body.dark {
 }
 
 #toggle-theme-button.dark {
-  color: var(--bg-color);
+  color: var(--soft-white);
 }
 
 #toggle-theme-button.dark:hover {
