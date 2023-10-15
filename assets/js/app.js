@@ -42,12 +42,12 @@ const loadTheme = () => {
       bodyEl.classList.add('dark');
       clockEl.classList.add('dark');
       toggleThemeButton.classList.add('dark');
-      icon.classList.replace('bi-moon', 'bi-sun');
+      icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
     } else {
       bodyEl.classList.remove('dark');
       clockEl.classList.remove('dark');
       toggleThemeButton.classList.remove('dark');
-      icon.classList.replace('bi-sun', 'bi-moon');
+      icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
     }
   }
 }
@@ -62,13 +62,13 @@ const toggleTheme = () => {
   bodyEl.classList.toggle('dark');
   clockEl.classList.toggle('dark');
   toggleThemeButton.classList.toggle('dark');
-  if (icon.classList.contains('bi-sun')) {
+  if (icon.classList.contains('bi-sun-fill')) {
     theme = 'light';
-    icon.classList.replace('bi-sun', 'bi-moon');
+    icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
     localStorage.setItem('theme', theme);
   } else {
     theme = 'dark';
-    icon.classList.replace('bi-moon', 'bi-sun');
+    icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
     localStorage.setItem('theme', theme);
   }
 }
