@@ -16,18 +16,18 @@ body,
 
 body {
   background-color: var(--soft-white);
+  background-color: #d5d5d5;
   color: var(--soft-black);
   font-family: 'Comfortaa', sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 #clock {
   background-color: #fff;
-  border: 7px double black;
+  border: 7px double var(--soft-black);
   border-radius: 9px;
   height: 204px;
   width: 330px;
