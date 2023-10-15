@@ -37,6 +37,23 @@ body {
   align-items: center;
 }
 
+#toggle-theme-button {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+
+#toggle-theme-button:hover {
+  background-color: #d5d5d5;
+  cursor: pointer;
+}
+
+#icon-theme {
+  font-size: 1.5rem;
+}
+
 .bi-moon-fill {
   color: var(--soft-black);
 }
@@ -47,31 +64,11 @@ body {
 
 #time {
   font-size: 3.1rem;
-  margin-bottom: 15px;
-  margin-top: 15px;
+  margin: 15px 0;
 }
 
 #date {
   font-size: 1.2rem;
-}
-
-#toggle-theme-button {
-  background-color: transparent;
-  border: none;
-  border-radius: 50%;
-  height: 45px;
-  width: 45px;
-  padding: 7px;
-}
-
-#toggle-theme-button:hover {
-  background-color: #d5d5d5;
-  cursor: pointer;
-}
-
-#icon-theme {
-  font-size: 1.5rem;
-  pointer-events: none;
 }
 
 /* Dark theme */
