@@ -18,7 +18,7 @@ body {
   background-color: var(--soft-white);
   background-color: #d5d5d5;
   color: var(--soft-black);
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,8 +28,9 @@ body {
   background-color: #fff;
   border: 7px double var(--soft-black);
   border-radius: 9px;
-  height: 204px;
-  width: 330px;
+  min-width: 320px;
+  max-width: 480px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,9 +69,27 @@ body {
 
 .date {
   font-size: 1.2rem;
+  margin-bottom: 5%;
 }
 
-/* Dark theme */
+.loading-spinner {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5%;
+  border: 9px solid var(--soft-white);
+  border-radius: 50%;
+  border-top-color: var(--soft-black);
+  animation: spin .5s linear 0s infinite normal backwards;
+  -moz-animation: spin .5s linear 0s infinite normal backwards;
+  -o-animation: spin .5s linear 0s infinite normal backwards;
+  -webkit-animation: spin .5s linear 0s infinite normal backwards;
+}
+
+.is-hidden {
+  display: none;
+}
+
+/* Tema escuro */
 
 body.dark {
   background-color: var(--soft-black);
@@ -84,4 +103,29 @@ body.dark {
 
 .toggle-theme-button.dark:hover {
   background-color: #424242;
+}
+
+.loading-spinner.dark {
+  border-color: var(--soft-black);
+  border-top-color: #ccc;
+}
+
+/* Animações */
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    -webkit-transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
 }
