@@ -18,7 +18,6 @@ body {
   background-color: var(--soft-white);
   background-color: #d5d5d5;
   color: var(--soft-black);
-  font-family: 'Comfortaa', sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
