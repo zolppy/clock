@@ -24,6 +24,16 @@ const insertDate = () => {
   let month = time.getMonth() + 1;
   let year = time.getFullYear();
 
+  const container1 = document.querySelector(".time");
+  const container2 = document.querySelector(".date");
+  const spinner = document.querySelector(".loading-spinner");
+
+  setTimeout(() => {
+    container1.classList.remove("is-hidden");
+    container2.classList.remove("is-hidden");
+    spinner.classList.add("is-hidden");
+  }, 3000);
+
   dayContainer.textContent = getTimeUnit(day);
   monthContainer.textContent = getTimeUnit(month);
   yearContainer.textContent = getTimeUnit(year);
@@ -32,6 +42,7 @@ const insertDate = () => {
 const loadTheme = () => {
   const bodyEl = document.querySelector('body');
   const clockEl = document.querySelector('.clock');
+  const spinnerEl = document.querySelector('.loading-spinner');
   const toggleThemeButton = document.querySelector('.toggle-theme-button');
   const icon = document.querySelector('.icon-theme');
   const theme = localStorage.getItem('theme');
@@ -42,11 +53,13 @@ const loadTheme = () => {
       bodyEl.classList.add('dark');
       clockEl.classList.add('dark');
       toggleThemeButton.classList.add('dark');
+      spinnerEl.classList.add("dark");
       icon.classList.replace('bi-moon-fill', 'bi-sun-fill');
     } else {
       bodyEl.classList.remove('dark');
       clockEl.classList.remove('dark');
       toggleThemeButton.classList.remove('dark');
+      spinnerEl.classList.remove("dark");
       icon.classList.replace('bi-sun-fill', 'bi-moon-fill');
     }
   }
