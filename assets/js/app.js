@@ -1,10 +1,10 @@
-const toggleThemeButton = document.getElementById('toggle-theme-button');
+const toggleThemeButton = document.querySelector('.toggle-theme-button');
 const getTimeUnit = unit => unit < 10 ? '0' + unit : unit;
 
 const updateTime = () => {
-  const hoursContainer = document.getElementById('hours');
-  const minutesContainer = document.getElementById('minutes');
-  const secondsContainer = document.getElementById('seconds');
+  const hoursContainer = document.querySelector('.hours');
+  const minutesContainer = document.querySelector('.minutes');
+  const secondsContainer = document.querySelector('.seconds');
   const time = new Date();
   let hours = time.getHours();
   let minutes = time.getMinutes();
@@ -16,9 +16,9 @@ const updateTime = () => {
 }
 
 const insertDate = () => {
-  const yearContainer = document.getElementById('year');
-  const monthContainer = document.getElementById('month');
-  const dayContainer = document.getElementById('day');
+  const yearContainer = document.querySelector('.year');
+  const monthContainer = document.querySelector('.month');
+  const dayContainer = document.querySelector('.day');
   const time = new Date();
   let day = time.getDate();
   let month = time.getMonth() + 1;
@@ -31,9 +31,9 @@ const insertDate = () => {
 
 const loadTheme = () => {
   const bodyEl = document.querySelector('body');
-  const clockEl = document.querySelector('#clock');
-  const toggleThemeButton = document.querySelector('#toggle-theme-button');
-  const icon = document.querySelector('#icon-theme');
+  const clockEl = document.querySelector('.clock');
+  const toggleThemeButton = document.querySelector('.toggle-theme-button');
+  const icon = document.querySelector('.icon-theme');
   const theme = localStorage.getItem('theme');
 
   if (theme) {
@@ -54,9 +54,9 @@ const loadTheme = () => {
 
 const toggleTheme = () => {
   const bodyEl = document.querySelector('body');
-  const clockEl = document.querySelector('#clock');
-  const toggleThemeButton = document.querySelector('#toggle-theme-button');
-  const icon = document.querySelector('#icon-theme');
+  const clockEl = document.querySelector('.clock');
+  const toggleThemeButton = document.querySelector('.toggle-theme-button');
+  const icon = document.querySelector('.icon-theme');
   let theme;
 
   bodyEl.classList.toggle('dark');
